@@ -1,0 +1,4 @@
+rdstd
+=====
+
+common function
