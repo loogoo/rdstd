@@ -62,10 +62,10 @@
 			<Tool
 				Name="VCLinkerTool"
 				OutputFile="$(OutDir)\$(ProjectName).dll"
-				AdditionalLibraryDirectories="..\..\04lib"
+				AdditionalLibraryDirectories="..\..\lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
-				ImportLibrary="../../../04lib/$(TargetName)D.lib"
+				ImportLibrary="../../lib/$(TargetName)D.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -137,11 +137,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalLibraryDirectories="..\..\04lib"
+				AdditionalLibraryDirectories="..\..\lib"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
-				ImportLibrary="../../../04lib/$(TargetName).lib"
+				ImportLibrary="../../lib/$(TargetName).lib"
 				TargetMachine="1"
 			/>
 			<Tool

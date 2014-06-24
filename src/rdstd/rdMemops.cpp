@@ -11,6 +11,7 @@
 
 BEGIN_RDSTD_NAMESPACE
 
+
 void zero_mem(void* ptr, size_t n)
 {
 	volatile uint8_t* p = reinterpret_cast<volatile uint8_t*>(ptr);
