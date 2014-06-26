@@ -316,7 +316,7 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="thread"
+			Name="thread_shared"
 			>
 			<File
 				RelativePath=".\rdRunable.h"
@@ -428,6 +428,18 @@
 			</File>
 			<File
 				RelativePath=".\rdMemsecC99.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="thread_ex"
+			>
+			<File
+				RelativePath=".\rdThreadEx.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\rdThreadEx.h"
 				>
 			</File>
 		</Filter>

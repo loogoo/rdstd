@@ -12,6 +12,7 @@
 
 #include "rdSemaphore.h"
 #include "rdMutex.h"
+#include "rdMutexEx.h"
 
 BEGIN_RDSTD_NAMESPACE
  
@@ -21,12 +22,16 @@ class RD_STD_DLL_ENTRY rdSemaphoreLocal : public rdSemaphore {
 public:
 	bool wait(rdMutex& mutex, time_t timeoutMsec) ;
 	void wait(rdMutex& mutex);
+
+	bool wait(rdMutexEx& mutex, time_t timeoutMsec) ;
+	void wait(rdMutexEx& mutex);
+
 	bool open(unsigned initValue = 0);
 };
 
 #else
 
-class dbLocalSemaphore { 
+class rdLocalSemaphore { 
 	pthread_cond_t   cond;
 	int              count;
 public:
