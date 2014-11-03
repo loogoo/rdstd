@@ -32,4 +32,3 @@ int32_t rdFileUtil::close_r(int32_t fd)
 
 
 END_RDSTD_NAMESPACE
-

@@ -427,6 +427,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\rdMempool.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\rdMempool.h"
+				>
+			</File>
+			<File
 				RelativePath=".\rdMemsecC99.h"
 				>
 			</File>
@@ -440,6 +448,22 @@
 			</File>
 			<File
 				RelativePath=".\rdThreadEx.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="pugixml1.4"
+			>
+			<File
+				RelativePath=".\pugixml\pugiconfig.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\pugixml\pugixml.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\pugixml\pugixml.hpp"
 				>
 			</File>
 		</Filter>
