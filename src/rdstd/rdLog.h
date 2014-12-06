@@ -16,9 +16,9 @@
 #include <sys/time.h>
 #endif
 
-#include "rdLogDeviceManager.h"
-#include "rdThreadUtil.h"
-#include "rdTime.h"
+#include <rdLogDeviceManager.h>
+#include <rdThreadUtil.h>
+#include <rdTime.h>
 
 
 
@@ -71,7 +71,7 @@ struct rdstd::log_message_t log_message = { \
 	__FILE__, \
 	STR(__LINE__), \
 	___tv, \
-	rdstd::ThreadUtil::self_id() \
+	rdstd::rdThreadUtil::self_id() \
 }; \
 	rdstd::rdLogDeviceManager::get_instance()->write(DEVICE, log_message); \
 	} \

@@ -36,7 +36,7 @@ struct timezone
 	int  tz_dsttime;     /* type of dst correction */
 };
 
-int gettimeofday(struct ::timeval *tv, struct timezone *tz);
+int RD_STD_DLL_ENTRY gettimeofday(struct ::timeval *tv, struct timezone *tz);
 #endif
 
 class RD_STD_DLL_ENTRY rdTime 

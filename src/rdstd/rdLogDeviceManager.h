@@ -24,7 +24,7 @@
 BEGIN_RDSTD_NAMESPACE
 
 /**
-* @brief log_open 1. 加载配置文件，打开rdstd日志对象 2. 加载内置日志对象"rdstd"
+* @brief rdlog_open 1. 加载配置文件，打开rdstd日志对象 2. 加载内置日志对象"rdstd"
 *
 * @param conf_filepath rdstd日志配置文件路径
 * @see
@@ -34,14 +34,14 @@ BEGIN_RDSTD_NAMESPACE
 void RD_STD_DLL_ENTRY rdlog_open(const char* conf_filepath = NULL);
 
 /**
-* @brief log_close 关闭BGCC日志对象
+* @brief log_close 关闭日志对象
 *
 * @return 
 * 
 * @note
 * 请在main函数结束前调用该函数
 */
-int32_t RD_STD_DLL_ENTRY log_close();
+int32_t RD_STD_DLL_ENTRY rdlog_close();
 
 /**
 * @brief 日志对象类
@@ -88,6 +88,33 @@ public:
 	* @return 成功则返回0
 	*/
 	int32_t write(const char* device_name, const struct log_message_t& log_message);
+
+	/**
+	 * @brief add_device 将新设备添加到设备列表中
+	 *
+	 * @param const char * file_path 文件日志设备文件路径
+	 * @param const char * name 日志设备名
+	 * @param int32_t loglevel 设备日志级别
+	 * @param int32_t split_policy 设备分割策略
+	 * @param off_t max_size 日志文件最大字节数
+	 * @param int32_t max_record_interval 日志文件记录最大时长
+	 * @param const char * log_format 日志格式控制串
+	 *
+	 * @return int32_t 操作成功返回0。当新设备名称与已有设备名称相同时，则认为添加失败，返回非0值
+	 *
+	 * @see
+	 * @note
+	 *
+	 * @author liy
+	 * @date   2014年12月6日 11时19分28秒
+	 */
+	int32_t add_device(const char* file_path,
+		const char* name,
+		int32_t loglevel,
+		int32_t split_policy,
+		off_t max_size,
+		int32_t max_record_interval,
+		const char* log_format);
 
 private:
 	/**
