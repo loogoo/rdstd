@@ -279,7 +279,7 @@ void load_conf_device(const char* conf_filepath)
     delete root;
 }
 
-void log_open(const char* conf_filepath) 
+void rdlog_open(const char* conf_filepath) 
 {
     if (NULL != conf_filepath) {
         load_conf_device(conf_filepath);
@@ -296,7 +296,7 @@ void log_open(const char* conf_filepath)
     }
 }
 
-int32_t log_close() 
+int32_t rdlog_close() 
 {
     return 0;
 }
@@ -324,6 +324,43 @@ bool rdLogDeviceManager::is_device_exist(const char* device_name)
 {
     return get_device(device_name) != NULL;
 }
+
+int32_t rdLogDeviceManager::add_device(const char* file_path,
+				   const char* name,
+				   int32_t loglevel,
+				   int32_t split_policy,
+				   off_t max_size,
+				   int32_t max_record_interval,
+				   const char* log_format)
+{
+
+	if (is_device_exist(name)) {
+		return -1;
+	}
+
+	ILogDevice* device = new(std::nothrow) rdFileLogDevice(
+		file_path, name, loglevel,
+		split_policy, (off_t)max_size, max_record_interval,
+		log_format);
+
+	if (NULL == device ) {
+		std::cerr << "Create device " << name << " failed." << std::endl;
+		return -1;;
+	}
+
+	if (0 != device->open()) {
+		std::cerr << "Open device " << name << " failed: "  << std::endl;
+		return -1;;
+	}
+
+	if (0 != add_device(device)) {
+		std::cerr << "Add device " << name << " failed" << std::endl;
+		return -1;;
+	}
+
+	return 0;
+}
+
 
 int32_t rdLogDeviceManager::add_device(ILogDevice* device) 
 {

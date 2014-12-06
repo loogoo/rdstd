@@ -10,6 +10,8 @@
 #ifndef _CONFIG_H_
 #define _CONFIG_H_
 
+
+
 // 应用命名空间
 #define USE_NAMESPACES
 

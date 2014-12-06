@@ -40,6 +40,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories=".;./gen;./org;./rdServer;../rdstd;../../include"
+				PreprocessorDefinitions="RD_STD_DLL"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -175,82 +176,18 @@
 				RelativePath=".\rdServer\main.cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\rdServer\rdWebApp.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\rdServer\rdWebApp.h"
-				>
-			</File>
-			<File
-				RelativePath=".\rdWebService.cpp"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="头文件"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
-			<File
-				RelativePath=".\psev\rdms.h"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="资源文件"
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
-		</Filter>
-		<Filter
-			Name="control"
-			>
-			<Filter
-				Name="util"
-				>
-				<File
-					RelativePath=".\rdWebhdr.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\rdWebhdr.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="soap"
-				>
-				<File
-					RelativePath=".\org\stdsoap2.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\org\stdsoap2.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="gen"
-				>
-				<File
-					RelativePath=".\gen\soapC.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\gen\soapH.h"
-					>
-				</File>
-				<File
-					RelativePath=".\gen\soapServer.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\gen\soapStub.h"
-					>
-				</File>
-			</Filter>
 		</Filter>
 	</Files>
 	<Globals>

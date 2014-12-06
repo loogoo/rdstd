@@ -19,7 +19,7 @@
 
 BEGIN_RDSTD_NAMESPACE
 
-class rdThreadUtil {
+class RD_STD_DLL_ENTRY rdThreadUtil {
 public:
 	static int64_t self_id();
 };
