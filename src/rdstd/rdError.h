@@ -9,9 +9,9 @@
 ***************************************************************************/
 #ifndef _RD_STD_ERROR_H_
 #define _RD_STD_ERROR_H_
-
+ 
 #include "rdstdtp.h"
-
+ 
 #ifdef _WIN32
 #include <Windows.h>
 #define rdGetLastError() GetLastError()

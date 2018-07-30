@@ -20,8 +20,6 @@
 #include <rdThreadUtil.h>
 #include <rdTime.h>
 
-
-
 #define STR(x) STR2(x)
 #define STR2(x) #x
 #ifdef _WIN32
